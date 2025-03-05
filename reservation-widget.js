@@ -85,6 +85,23 @@
           background: rgba(0, 0, 0, 0.1) !important;
         }
 
+        /* Mobile responsive styles */
+        @media screen and (max-width: 768px) {
+          .fancybox__content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            transform: none !important;
+            margin: 0 !important;
+          }
+        }
+
         .is-close-btn {
           display: none;
         }
