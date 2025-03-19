@@ -82,7 +82,11 @@
         }
 
         .fancybox__backdrop {
-          background: rgba(0, 0, 0, 0.1) !important;
+          display: none !important;
+        }
+
+        body.fancybox-active {
+          overflow: auto !important;
         }
 
         /* Mobile responsive styles */
