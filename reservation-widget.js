@@ -82,8 +82,7 @@
         }
 
         .fancybox__backdrop {
-          display: none !important;
-          background: transparent !important;
+          background: rgba(0, 0, 0, 0.1) !important;
         }
 
         body.fancybox-active {
