@@ -83,6 +83,7 @@
 
         .fancybox__backdrop {
           display: none !important;
+          background: transparent !important;
         }
 
         body.fancybox-active {
