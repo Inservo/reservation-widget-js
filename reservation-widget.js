@@ -54,7 +54,7 @@
     }
 
     setupFancyBox() {
-      Fancybox.bind("[data-fancybox]", {
+      Fancybox.bind("[data-fancybox="reservation-widget"]", {
         showClass: "custom-css", // This will add the custom-css class
       });
 
