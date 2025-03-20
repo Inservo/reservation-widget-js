@@ -37,14 +37,14 @@
     }
 
     getModuleHeight() {
-      const moduleElement = document.getElementById("reservo-widget");
+      const moduleElement = document.getElementById("reservation-widget");
       return moduleElement?.dataset.moduleHeight
         ? parseInt(moduleElement.dataset.moduleHeight, 10)
         : this.defaultHeight;
     }
 
     getModuleWidth() {
-      const moduleElement = document.getElementById("reservo-widget");
+      const moduleElement = document.getElementById("reservation-widget");
       return moduleElement?.dataset.moduleWidth
         ? Math.max(
             parseInt(moduleElement.dataset.moduleWidth, 10),
