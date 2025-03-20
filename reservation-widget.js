@@ -60,6 +60,12 @@
 
       this.injectCustomStyles();
       this.setupModuleLinks();
+
+      window.addEventListener("message", (event) => {
+        if (event.data?.type === "CLOSE_FANCYBOX" && window.Fancybox) {
+          window.Fancybox.close();
+        }
+      });
     }
 
     injectCustomStyles() {
@@ -115,10 +121,6 @@
 
     setupModuleLinks() {
       const links = {
-        "#reservo-widget": {
-          width: this.getModuleWidth(),
-          height: this.getModuleHeight(),
-        },
         "#reservation-widget": {
           width: this.getModuleWidth(),
           height: this.getModuleHeight(),
@@ -138,13 +140,6 @@
               // Add this check
               e.preventDefault();
               return;
-            }
-            if (
-              window.innerWidth < this.minWidth ||
-              window.innerHeight < this.minHeight
-            ) {
-              // Don't prevent default behavior, let the link open in a new tab
-              window.open(element.href, "_blank");
             } else {
               e.preventDefault(); // Prevent default only for FancyBox
               isOpen = true; // Set isOpen to true
@@ -158,6 +153,8 @@
                   },
                 ],
                 {
+                  animationEffect: "slide",
+                  animationDuration: 200,
                   on: {
                     destroy: () => {
                       isOpen = false; // Reset isOpen when FancyBox is closed
